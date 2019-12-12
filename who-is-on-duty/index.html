@@ -1,1 +1,64 @@
-I AM
+<html>
+<head>
+    <style>
+        body {
+            background: #2980B9;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            height: 100%;
+            width: 100%;
+            display: flex;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+        #onduty {
+            text-shadow: 2px 2px white;
+            font-family: Arial;
+            font-size: 100px;
+        }
+        #disclaimer {
+            color: white;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+    </style>
+<script>
+    function setName(name) {
+        document.getElementById("onduty").innerText = name;
+    }
+    window.onload = function() {
+        switch (new Date().getDay()) {
+            case 1:
+                setName('Michiel');
+                break;
+            case 2:
+                setName('Tim');
+                break;
+            case 3:
+                setName('Ellie');
+                break;
+            case 4:
+                setName('Tom');
+                break;
+            case 5:
+                setName('Andie');
+                break;
+            default:
+                setName('Enjoy the weekend!');
+                break;
+
+        }
+    }
+</script>
+</head>
+<body>
+<div id="onduty">
+
+</div>
+<br/>
+<div id="disclaimer">Made with love by Andie for Pascal &#9829;</div>
+</body>
+</html>
